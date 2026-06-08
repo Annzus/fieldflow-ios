@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* FieldFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000001 /* FieldFlowApp.swift */; };
+		100000000000000000000002 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* DependencyContainer.swift */; };
+		100000000000000000000003 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000003 /* AppRouter.swift */; };
+		100000000000000000000004 /* WorkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000004 /* WorkItem.swift */; };
+		100000000000000000000005 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000005 /* Member.swift */; };
+		100000000000000000000006 /* ActivityHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000006 /* ActivityHistory.swift */; };
+		100000000000000000000007 /* PendingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000007 /* PendingOperation.swift */; };
+		100000000000000000000008 /* ConflictRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000008 /* ConflictRecord.swift */; };
+		100000000000000000000009 /* WorkItemInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000009 /* WorkItemInput.swift */; };
+		10000000000000000000000A /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000A /* AppError.swift */; };
+		10000000000000000000000B /* WorkItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000B /* WorkItemRepository.swift */; };
+		10000000000000000000000C /* MockWorkItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000C /* MockWorkItemRepository.swift */; };
+		10000000000000000000000D /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000D /* LoadingState.swift */; };
+		10000000000000000000000E /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000E /* PreviewData.swift */; };
+		10000000000000000000000F /* WorkItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000F /* WorkItemListViewModel.swift */; };
+		100000000000000000000010 /* WorkItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000010 /* WorkItemListView.swift */; };
+		100000000000000000000011 /* WorkItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* WorkItemRowView.swift */; };
+		100000000000000000000012 /* FieldFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000012 /* FieldFlowTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		300000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600000000000000000000001;
+			remoteInfo = FieldFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* FieldFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldFlowApp.swift; sourceTree = "<group>"; };
+		200000000000000000000002 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		200000000000000000000003 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		200000000000000000000004 /* WorkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItem.swift; sourceTree = "<group>"; };
+		200000000000000000000005 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		200000000000000000000006 /* ActivityHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistory.swift; sourceTree = "<group>"; };
+		200000000000000000000007 /* PendingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperation.swift; sourceTree = "<group>"; };
+		200000000000000000000008 /* ConflictRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictRecord.swift; sourceTree = "<group>"; };
+		200000000000000000000009 /* WorkItemInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemInput.swift; sourceTree = "<group>"; };
+		20000000000000000000000A /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		20000000000000000000000B /* WorkItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemRepository.swift; sourceTree = "<group>"; };
+		20000000000000000000000C /* MockWorkItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkItemRepository.swift; sourceTree = "<group>"; };
+		20000000000000000000000D /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		20000000000000000000000E /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		20000000000000000000000F /* WorkItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemListViewModel.swift; sourceTree = "<group>"; };
+		200000000000000000000010 /* WorkItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemListView.swift; sourceTree = "<group>"; };
+		200000000000000000000011 /* WorkItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemRowView.swift; sourceTree = "<group>"; };
+		200000000000000000000012 /* FieldFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldFlowTests.swift; sourceTree = "<group>"; };
+		200000000000000000000013 /* FieldFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000014 /* FieldFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		400000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		700000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				700000000000000000000002 /* FieldFlow */,
+				70000000000000000000000D /* FieldFlowTests */,
+				70000000000000000000000E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		700000000000000000000002 /* FieldFlow */ = {
+			isa = PBXGroup;
+			children = (
+				700000000000000000000003 /* App */,
+				700000000000000000000004 /* Domain */,
+				700000000000000000000009 /* Core */,
+				70000000000000000000000B /* Features */,
+			);
+			path = FieldFlow;
+			sourceTree = "<group>";
+		};
+		700000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000001 /* FieldFlowApp.swift */,
+				200000000000000000000002 /* DependencyContainer.swift */,
+				200000000000000000000003 /* AppRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		700000000000000000000004 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				700000000000000000000005 /* Models */,
+				700000000000000000000006 /* Repositories */,
+				700000000000000000000007 /* Errors */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		700000000000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000004 /* WorkItem.swift */,
+				200000000000000000000005 /* Member.swift */,
+				200000000000000000000006 /* ActivityHistory.swift */,
+				200000000000000000000007 /* PendingOperation.swift */,
+				200000000000000000000008 /* ConflictRecord.swift */,
+				200000000000000000000009 /* WorkItemInput.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		700000000000000000000006 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000000B /* WorkItemRepository.swift */,
+				20000000000000000000000C /* MockWorkItemRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		700000000000000000000007 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000000A /* AppError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		700000000000000000000009 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70000000000000000000000A /* State */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000000D /* LoadingState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				70000000000000000000000C /* WorkItemList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000C /* WorkItemList */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000000E /* PreviewData.swift */,
+				20000000000000000000000F /* WorkItemListViewModel.swift */,
+				200000000000000000000010 /* WorkItemListView.swift */,
+				200000000000000000000011 /* WorkItemRowView.swift */,
+			);
+			path = WorkItemList;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000D /* FieldFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000012 /* FieldFlowTests.swift */,
+			);
+			path = FieldFlowTests;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000013 /* FieldFlow.app */,
+				200000000000000000000014 /* FieldFlowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		600000000000000000000001 /* FieldFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000003 /* Build configuration list for PBXNativeTarget "FieldFlow" */;
+			buildPhases = (
+				800000000000000000000001 /* Sources */,
+				400000000000000000000001 /* Frameworks */,
+				800000000000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FieldFlow;
+			productName = FieldFlow;
+			productReference = 200000000000000000000013 /* FieldFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		600000000000000000000002 /* FieldFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000004 /* Build configuration list for PBXNativeTarget "FieldFlowTests" */;
+			buildPhases = (
+				800000000000000000000003 /* Sources */,
+				400000000000000000000002 /* Frameworks */,
+				800000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				300000000000000000000002 /* PBXTargetDependency */,
+			);
+			name = FieldFlowTests;
+			productName = FieldFlowTests;
+			productReference = 200000000000000000000014 /* FieldFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		500000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					600000000000000000000001 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					600000000000000000000002 = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = 600000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = 900000000000000000000001 /* Build configuration list for PBXProject "FieldFlow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 700000000000000000000001;
+			productRefGroup = 70000000000000000000000E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				600000000000000000000001 /* FieldFlow */,
+				600000000000000000000002 /* FieldFlowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		800000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		800000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		800000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000001 /* FieldFlowApp.swift in Sources */,
+				100000000000000000000002 /* DependencyContainer.swift in Sources */,
+				100000000000000000000003 /* AppRouter.swift in Sources */,
+				100000000000000000000004 /* WorkItem.swift in Sources */,
+				100000000000000000000005 /* Member.swift in Sources */,
+				100000000000000000000006 /* ActivityHistory.swift in Sources */,
+				100000000000000000000007 /* PendingOperation.swift in Sources */,
+				100000000000000000000008 /* ConflictRecord.swift in Sources */,
+				100000000000000000000009 /* WorkItemInput.swift in Sources */,
+				10000000000000000000000A /* AppError.swift in Sources */,
+				10000000000000000000000B /* WorkItemRepository.swift in Sources */,
+				10000000000000000000000C /* MockWorkItemRepository.swift in Sources */,
+				10000000000000000000000D /* LoadingState.swift in Sources */,
+				10000000000000000000000E /* PreviewData.swift in Sources */,
+				10000000000000000000000F /* WorkItemListViewModel.swift in Sources */,
+				100000000000000000000010 /* WorkItemListView.swift in Sources */,
+				100000000000000000000011 /* WorkItemRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		800000000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000012 /* FieldFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		300000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 600000000000000000000001 /* FieldFlow */;
+			targetProxy = 300000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		900000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		900000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		900000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FieldFlow;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.impl.FieldFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		900000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FieldFlow;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.impl.FieldFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		900000000000000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.impl.FieldFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FieldFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FieldFlow";
+			};
+			name = Debug;
+		};
+		90000000000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.impl.FieldFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FieldFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FieldFlow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900000000000000000000001 /* Build configuration list for PBXProject "FieldFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900000000000000000000005 /* Debug */,
+				900000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		900000000000000000000003 /* Build configuration list for PBXNativeTarget "FieldFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900000000000000000000007 /* Debug */,
+				900000000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		900000000000000000000004 /* Build configuration list for PBXNativeTarget "FieldFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900000000000000000000009 /* Debug */,
+				90000000000000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 500000000000000000000001 /* Project object */;
+}
