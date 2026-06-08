@@ -2,7 +2,7 @@
 
 FieldFlow is an iOS portfolio app for field operations workflows. It focuses on a practical mobile client architecture for task-like business records called WorkItems.
 
-The current app runs with local mock data and demonstrates a SwiftUI WorkItem list, domain modeling, repository abstraction, dependency injection, and basic unit tests.
+The current app runs with local SwiftData storage and demonstrates demo login, WorkItem browsing, local create/edit flows, activity history, repository abstraction, dependency injection, and unit tests.
 
 ## Concept
 
@@ -10,10 +10,16 @@ Mobile business apps often need to keep working when network conditions are unst
 
 ## Features
 
-- WorkItem list with mock business data
+- Demo account login
+- WorkItem list backed by SwiftData
+- WorkItem detail screen
+- Local WorkItem creation and editing
+- Activity history for local changes
 - Search by title or detail
 - Status filter
+- Assignee filter
 - Priority, assignee, and sync status display
+- Local data retained after app restart
 - SwiftUI preview support
 - Unit tests for repository and view model behavior
 
@@ -22,6 +28,8 @@ Mobile business apps often need to keep working when network conditions are unst
 - Swift 6
 - SwiftUI
 - Swift Concurrency
+- SwiftData
+- Keychain
 - XCTest
 - Xcode project
 - iOS 17+
@@ -34,10 +42,11 @@ Current structure:
 App
 → DependencyContainer
 → AppRouter
-→ WorkItemListView
+→ LoginView / WorkItemListView
 → WorkItemListViewModel
 → WorkItemRepository
-→ MockWorkItemRepository
+→ SwiftDataWorkItemRepository
+→ SwiftData Models
 ```
 
 Planned direction:
@@ -47,10 +56,10 @@ View
 → ViewModel
 → UseCase
 → Repository
-→ LocalStore / APIClient
+→ SwiftData LocalStore / APIClient
 ```
 
-The domain layer does not depend on SwiftUI, URLSession, or persistence frameworks. This keeps the core models and repository contracts easy to test and replace.
+The domain layer does not depend on SwiftUI, URLSession, or SwiftData. This keeps the core models and repository contracts easy to test and replace.
 
 ## Setup
 
@@ -84,9 +93,8 @@ If `iPhone 17` is not available locally, replace it with any installed iPhone si
 
 ## Roadmap
 
-- Local persistence with SwiftData
-- Create and edit WorkItems
 - Offline operation queue
 - REST API integration
 - Conflict handling and retry policy
 - UIKit bridge example
+- CI workflow

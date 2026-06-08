@@ -25,6 +25,19 @@
 		100000000000000000000010 /* WorkItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000010 /* WorkItemListView.swift */; };
 		100000000000000000000011 /* WorkItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* WorkItemRowView.swift */; };
 		100000000000000000000012 /* FieldFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000012 /* FieldFlowTests.swift */; };
+		100000000000000000000013 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000015 /* AuthenticationRepository.swift */; };
+		100000000000000000000014 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000016 /* KeychainTokenStore.swift */; };
+		100000000000000000000015 /* DemoAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000017 /* DemoAuthenticationRepository.swift */; };
+		100000000000000000000016 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000018 /* SessionStore.swift */; };
+		100000000000000000000017 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000019 /* LoginViewModel.swift */; };
+		100000000000000000000018 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001A /* LoginView.swift */; };
+		100000000000000000000019 /* WorkItemRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001B /* WorkItemRecord.swift */; };
+		10000000000000000000001A /* ActivityHistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001C /* ActivityHistoryRecord.swift */; };
+		10000000000000000000001B /* SwiftDataWorkItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001D /* SwiftDataWorkItemRepository.swift */; };
+		10000000000000000000001C /* WorkItemEditorMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001E /* WorkItemEditorMode.swift */; };
+		10000000000000000000001D /* WorkItemEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001F /* WorkItemEditorView.swift */; };
+		10000000000000000000001E /* WorkItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000020 /* WorkItemDetailViewModel.swift */; };
+		10000000000000000000001F /* WorkItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000021 /* WorkItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +71,19 @@
 		200000000000000000000012 /* FieldFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldFlowTests.swift; sourceTree = "<group>"; };
 		200000000000000000000013 /* FieldFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		200000000000000000000014 /* FieldFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000015 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		200000000000000000000016 /* KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTokenStore.swift; sourceTree = "<group>"; };
+		200000000000000000000017 /* DemoAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAuthenticationRepository.swift; sourceTree = "<group>"; };
+		200000000000000000000018 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		200000000000000000000019 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		20000000000000000000001A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		20000000000000000000001B /* WorkItemRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemRecord.swift; sourceTree = "<group>"; };
+		20000000000000000000001C /* ActivityHistoryRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryRecord.swift; sourceTree = "<group>"; };
+		20000000000000000000001D /* SwiftDataWorkItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataWorkItemRepository.swift; sourceTree = "<group>"; };
+		20000000000000000000001E /* WorkItemEditorMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemEditorMode.swift; sourceTree = "<group>"; };
+		20000000000000000000001F /* WorkItemEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemEditorView.swift; sourceTree = "<group>"; };
+		200000000000000000000020 /* WorkItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemDetailViewModel.swift; sourceTree = "<group>"; };
+		200000000000000000000021 /* WorkItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +118,7 @@
 			children = (
 				700000000000000000000003 /* App */,
 				700000000000000000000004 /* Domain */,
+				70000000000000000000000F /* Data */,
 				700000000000000000000009 /* Core */,
 				70000000000000000000000B /* Features */,
 			);
@@ -136,6 +163,7 @@
 			children = (
 				20000000000000000000000B /* WorkItemRepository.swift */,
 				20000000000000000000000C /* MockWorkItemRepository.swift */,
+				200000000000000000000015 /* AuthenticationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -152,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				70000000000000000000000A /* State */,
+				700000000000000000000015 /* Security */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -167,7 +196,10 @@
 		70000000000000000000000B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				700000000000000000000012 /* Authentication */,
 				70000000000000000000000C /* WorkItemList */,
+				700000000000000000000013 /* WorkItemDetail */,
+				700000000000000000000014 /* WorkItemEditor */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -181,6 +213,69 @@
 				200000000000000000000011 /* WorkItemRowView.swift */,
 			);
 			path = WorkItemList;
+			sourceTree = "<group>";
+		};
+		70000000000000000000000F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				700000000000000000000010 /* Local */,
+				700000000000000000000011 /* RepositoryImplementations */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		700000000000000000000010 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000001B /* WorkItemRecord.swift */,
+				20000000000000000000001C /* ActivityHistoryRecord.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		700000000000000000000011 /* RepositoryImplementations */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000001D /* SwiftDataWorkItemRepository.swift */,
+			);
+			path = RepositoryImplementations;
+			sourceTree = "<group>";
+		};
+		700000000000000000000012 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000017 /* DemoAuthenticationRepository.swift */,
+				200000000000000000000018 /* SessionStore.swift */,
+				200000000000000000000019 /* LoginViewModel.swift */,
+				20000000000000000000001A /* LoginView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		700000000000000000000013 /* WorkItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000020 /* WorkItemDetailViewModel.swift */,
+				200000000000000000000021 /* WorkItemDetailView.swift */,
+			);
+			path = WorkItemDetail;
+			sourceTree = "<group>";
+		};
+		700000000000000000000014 /* WorkItemEditor */ = {
+			isa = PBXGroup;
+			children = (
+				20000000000000000000001E /* WorkItemEditorMode.swift */,
+				20000000000000000000001F /* WorkItemEditorView.swift */,
+			);
+			path = WorkItemEditor;
+			sourceTree = "<group>";
+		};
+		700000000000000000000015 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000016 /* KeychainTokenStore.swift */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 		70000000000000000000000D /* FieldFlowTests */ = {
@@ -311,11 +406,24 @@
 				10000000000000000000000A /* AppError.swift in Sources */,
 				10000000000000000000000B /* WorkItemRepository.swift in Sources */,
 				10000000000000000000000C /* MockWorkItemRepository.swift in Sources */,
+				100000000000000000000013 /* AuthenticationRepository.swift in Sources */,
 				10000000000000000000000D /* LoadingState.swift in Sources */,
+				100000000000000000000014 /* KeychainTokenStore.swift in Sources */,
 				10000000000000000000000E /* PreviewData.swift in Sources */,
+				100000000000000000000015 /* DemoAuthenticationRepository.swift in Sources */,
+				100000000000000000000016 /* SessionStore.swift in Sources */,
+				100000000000000000000017 /* LoginViewModel.swift in Sources */,
+				100000000000000000000018 /* LoginView.swift in Sources */,
 				10000000000000000000000F /* WorkItemListViewModel.swift in Sources */,
 				100000000000000000000010 /* WorkItemListView.swift in Sources */,
 				100000000000000000000011 /* WorkItemRowView.swift in Sources */,
+				100000000000000000000019 /* WorkItemRecord.swift in Sources */,
+				10000000000000000000001A /* ActivityHistoryRecord.swift in Sources */,
+				10000000000000000000001B /* SwiftDataWorkItemRepository.swift in Sources */,
+				10000000000000000000001C /* WorkItemEditorMode.swift in Sources */,
+				10000000000000000000001D /* WorkItemEditorView.swift in Sources */,
+				10000000000000000000001E /* WorkItemDetailViewModel.swift in Sources */,
+				10000000000000000000001F /* WorkItemDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

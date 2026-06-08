@@ -2,9 +2,20 @@ import SwiftUI
 
 struct WorkItemListView: View {
     @StateObject private var viewModel: WorkItemListViewModel
+    @ObservedObject private var sessionStore: SessionStore
+    @State private var editorMode: WorkItemEditorMode?
+    @State private var errorMessage: String?
 
-    init(viewModel: WorkItemListViewModel) {
+    private let repository: any WorkItemRepository
+
+    init(
+        viewModel: WorkItemListViewModel,
+        repository: any WorkItemRepository,
+        sessionStore: SessionStore
+    ) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.repository = repository
+        self.sessionStore = sessionStore
     }
 
     var body: some View {
@@ -12,18 +23,59 @@ struct WorkItemListView: View {
             content
                 .navigationTitle("FieldFlow")
                 .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("ログアウト") {
+                            do {
+                                try sessionStore.logout()
+                            } catch let error as AppError {
+                                errorMessage = error.displayMessage
+                            } catch {
+                                errorMessage = AppError.unknown(message: String(describing: error)).displayMessage
+                            }
+                        }
+                    }
+
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
+                            editorMode = .create
                         } label: {
                             Image(systemName: "plus")
                         }
                         .accessibilityLabel("新規作成")
                     }
                 }
+                .navigationDestination(for: UUID.self) { itemID in
+                    WorkItemDetailView(
+                        viewModel: WorkItemDetailViewModel(
+                            itemID: itemID,
+                            repository: repository
+                        ),
+                        repository: repository
+                    )
+                }
         }
         .searchable(text: $viewModel.searchText, prompt: "WorkItemを検索")
         .task {
             await viewModel.loadItems()
+        }
+        .sheet(item: $editorMode) { mode in
+            WorkItemEditorView(mode: mode, repository: repository) {
+                await viewModel.reload()
+            }
+        }
+        .alert("エラー", isPresented: Binding(
+            get: { errorMessage != nil },
+            set: { isPresented in
+                if !isPresented {
+                    errorMessage = nil
+                }
+            }
+        ), presenting: errorMessage) { _ in
+            Button("OK", role: .cancel) {
+                errorMessage = nil
+            }
+        } message: {
+            Text($0)
         }
     }
 
@@ -48,9 +100,15 @@ struct WorkItemListView: View {
             } else {
                 List {
                     statusFilter
+                    assigneeFilter
                     ForEach(items) { item in
-                        WorkItemRowView(item: item)
+                        NavigationLink(value: item.id) {
+                            WorkItemRowView(item: item)
+                        }
                     }
+                }
+                .refreshable {
+                    await viewModel.reload()
                 }
             }
         }
@@ -67,12 +125,27 @@ struct WorkItemListView: View {
         .listRowSeparator(.hidden)
         .accessibilityLabel("ステータスフィルター")
     }
+
+    private var assigneeFilter: some View {
+        Picker("担当者", selection: $viewModel.selectedAssigneeID) {
+            Text("すべて").tag(nil as UUID?)
+            ForEach(PreviewData.members) { member in
+                Text(member.name).tag(member.id as UUID?)
+            }
+        }
+        .pickerStyle(.menu)
+        .accessibilityLabel("担当者フィルター")
+    }
 }
 
 #Preview {
+    let repository = MockWorkItemRepository(items: PreviewData.workItems)
+    let container = DependencyContainer.preview()
     WorkItemListView(
         viewModel: WorkItemListViewModel(
-            repository: MockWorkItemRepository(items: PreviewData.workItems)
-        )
+            repository: repository
+        ),
+        repository: repository,
+        sessionStore: container.sessionStore
     )
 }

@@ -10,6 +10,9 @@ final class WorkItemListViewModel: ObservableObject {
     @Published var selectedStatus: WorkItemStatus? {
         didSet { applyFilters() }
     }
+    @Published var selectedAssigneeID: UUID? {
+        didSet { applyFilters() }
+    }
 
     private let repository: any WorkItemRepository
     private var allItems: [WorkItem] = []
@@ -31,15 +34,20 @@ final class WorkItemListViewModel: ObservableObject {
         }
     }
 
+    func reload() async {
+        await loadItems()
+    }
+
     private func applyFilters() {
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
 
         let filtered = allItems.filter { item in
             let matchesStatus = selectedStatus.map { item.status == $0 } ?? true
+            let matchesAssignee = selectedAssigneeID.map { item.assigneeID == $0 } ?? true
             let matchesSearch = query.isEmpty
                 || item.title.localizedCaseInsensitiveContains(query)
                 || item.detail.localizedCaseInsensitiveContains(query)
-            return matchesStatus && matchesSearch
+            return matchesStatus && matchesAssignee && matchesSearch
         }
 
         state = .loaded(filtered)

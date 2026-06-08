@@ -1,12 +1,33 @@
 import SwiftUI
 
-struct AppRouter: Sendable {
+@MainActor
+struct AppRouter {
     let workItemRepository: any WorkItemRepository
+    let sessionStore: SessionStore
 
-    @MainActor
     func rootView() -> some View {
-        WorkItemListView(
-            viewModel: WorkItemListViewModel(repository: workItemRepository)
+        AppRootView(
+            workItemRepository: workItemRepository,
+            sessionStore: sessionStore
         )
+    }
+}
+
+private struct AppRootView: View {
+    let workItemRepository: any WorkItemRepository
+    @ObservedObject var sessionStore: SessionStore
+
+    var body: some View {
+        if sessionStore.isAuthenticated {
+            WorkItemListView(
+                viewModel: WorkItemListViewModel(repository: workItemRepository),
+                repository: workItemRepository,
+                sessionStore: sessionStore
+            )
+        } else {
+            LoginView(
+                viewModel: LoginViewModel(sessionStore: sessionStore)
+            )
+        }
     }
 }
