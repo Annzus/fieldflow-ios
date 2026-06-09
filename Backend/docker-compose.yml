@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fieldflow-postgres
+    environment:
+      POSTGRES_DB: fieldflow
+      POSTGRES_USER: fieldflow
+      POSTGRES_PASSWORD: fieldflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - fieldflow-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fieldflow -d fieldflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  fieldflow-postgres-data:

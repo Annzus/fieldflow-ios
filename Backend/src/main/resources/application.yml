@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: fieldflow-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fieldflow
+    username: fieldflow
+    password: fieldflow
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: 8080

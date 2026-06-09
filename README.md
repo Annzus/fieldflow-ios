@@ -33,6 +33,9 @@ Mobile business apps often need to keep working when network conditions are unst
 - XCTest
 - Xcode project
 - iOS 17+
+- Java 21 / Spring Boot backend
+- PostgreSQL / Flyway
+- OpenAPI / Swagger UI
 
 ## Architecture
 
@@ -57,11 +60,15 @@ View
 → UseCase
 → Repository
 → SwiftData LocalStore / APIClient
+→ Spring Boot API
+→ PostgreSQL
 ```
 
 The domain layer does not depend on SwiftUI, URLSession, or SwiftData. This keeps the core models and repository contracts easy to test and replace.
 
 ## Setup
+
+### iOS
 
 Requirements:
 
@@ -91,10 +98,47 @@ xcodebuild test \
 
 If `iPhone 17` is not available locally, replace it with any installed iPhone simulator name.
 
+### Backend
+
+Backend source is under `Backend/`.
+
+Requirements:
+
+- Java 21
+- Maven
+- Docker, for PostgreSQL
+
+Start PostgreSQL:
+
+```bash
+cd Backend
+docker compose up -d
+```
+
+Run backend tests:
+
+```bash
+cd Backend
+mvn test
+```
+
+Run API:
+
+```bash
+cd Backend
+mvn spring-boot:run
+```
+
+Swagger UI:
+
+```text
+http://localhost:8080/swagger-ui.html
+```
+
 ## Roadmap
 
 - Offline operation queue
-- REST API integration
+- iOS REST API integration
 - Conflict handling and retry policy
 - UIKit bridge example
 - CI workflow
